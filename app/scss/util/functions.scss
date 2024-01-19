@@ -1,0 +1,27 @@
+// @use "sass:math" as math;
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+//Used to convert pixels to rems
+
+@function rem($value, $context: 16) {
+  $remValue: ($value / $context) + rem;
+  @return $remValue;
+}
+
+// @function rem($pixels, $context: 16) {
+//   @return (math.div($pixels, $context)) * 1rem;
+// }
+
+// @function pxToRem($pxValue) {
+//   @return math.div($pxValue, 16px) * 1rem;
+// }
+
+// How to use
+// h1 {
+//   font-size: rem(30);
+// }
+
+// How is normaly use
+// h1 {
+//   font-size: 1.875rem;
+// }
